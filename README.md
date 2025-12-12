@@ -29,7 +29,8 @@
 确保已安装 Python 3.x，然后安装依赖：
 ```bash
 pip install opencv-python numpy mss pyinstaller
-2.校准坐标 (首次运行必须)
+
+### 2.校准坐标 (首次运行必须)
 由于不同电脑的分辨率不同，请先运行校准工具：
 
 Bash
