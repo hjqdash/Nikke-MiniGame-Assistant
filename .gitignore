@@ -7,15 +7,7 @@ build/
 dist/
 *.spec
 
-# 虚拟环境 (如果你有)
-venv/
-env/
-.env
 
-# 调试生成的图片 (虽然代码里删了，但防止残留)
-debug_failures/
-debug_missed/
-templates_raw/
 
 # IDE 配置
 .vscode/
@@ -23,3 +15,4 @@ templates_raw/
 
 # 图片资源 (可选：如果你想保留模板供人使用，就不要忽略 templates/)
 # templates/
+
