@@ -29,3 +29,43 @@
 确保已安装 Python 3.x，然后安装依赖：
 ```bash
 pip install opencv-python numpy mss pyinstaller
+2.校准坐标 (首次运行必须)
+由于不同电脑的分辨率不同，请先运行校准工具：
+
+Bash
+
+python calibration.py
+观察红色网格是否完美覆盖游戏中的方格。
+
+修改代码中的 ROI_X, ROI_Y 等参数直到对齐。
+
+3. 生成模板
+截取一张游戏全屏图 (命名为 pink.png)，运行：
+
+Bash
+
+python tools.py
+程序会自动切割并处理出纯黑底白字的数字模板，请挑选清晰的 1-9 图片放入 templates 文件夹。
+
+4. 启动辅助
+进入小游戏界面，运行：
+
+Bash
+
+python overlay_assistant.py
+绿框: 表示推荐的消除路径。
+
+黄框 (虚线): 表示无法识别或空地区域。
+
+📂 项目结构
+Plaintext
+
+.
+├── overlay_assistant.py  # [主程序] 透明覆盖层与核心逻辑
+├── recognizer.py         # [核心] 图像识别与抗干扰算法
+├── tools.py              # [工具] 自动切图与模板生成
+├── calibration.py        # [工具] 可视化坐标校准器
+├── templates/            # 数字模板图片资源
+└── README.md             # 项目说明文档
+⚠️ 免责声明
+本工具仅供学习与技术研究使用（图像识别算法验证）。请勿用于商业用途或在违反游戏服务条款的情况下使用。开发者不对因使用本工具导致的账号风险负责。
