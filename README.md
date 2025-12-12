@@ -26,8 +26,7 @@
 * **语言**: Python 3.x
 * **视觉处理**: OpenCV (cv2), NumPy
 * **屏幕捕获**: MSS (比 PyAutoGUI 快 10 倍)
-* **GUI 渲染**: Tkinter (Win32 API 实现鼠标穿透)
-* **打包工具**: PyInstaller
+* **GUI 渲染**: Tkinter (Win32 API 实现
 
 ## 🚀 快速开始
 
